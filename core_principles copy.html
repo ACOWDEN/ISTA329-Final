@@ -34,20 +34,20 @@
     <main>
         <div class="grid-container" id="gridContainer">
             <div class="grid-item" onclick="openPDF('Trust and Transparency.pdf')">Trust and Transparency</div>
-			<div class="grid-item" onclick="openPowerPoint('Permission')">Permission</div>
-			<div class="grid-item" onclick="openPowerPoint('Middlemen')">Middlemen</div>
-			<div class="grid-item" onclick="openPowerPoint('Centralization')">Centralization</div>
-			<div class="grid-item" onclick="openPowerPoint('Incentives')">Incentives</div>
-			<div class="grid-item" onclick="openPowerPoint('Ownership')">Ownership</div>
+			<div class="grid-item" onclick="openPDF('Permission')">Permission</div>
+			<div class="grid-item" onclick="openPDF('Middlemen')">Middlemen</div>
+			<div class="grid-item" onclick="openPDF('Centralization')">Centralization</div>
+			<div class="grid-item" onclick="openPDF('Incentives')">Incentives</div>
+			<div class="grid-item" onclick="openPDF('Ownership')">Ownership</div>
         </div>
 
-        <iframe id="powerpointIframe" width="100%" height="600" src="" frameborder="0"></iframe>
+        <iframe id="pdfIframe" width="100%" height="600" src="" frameborder="0"></iframe>
     </main>
 
     <footer>
         <p>&copy; 2023 blockspace. All rights reserved.</p>
     </footer>
-    <script scr="open_pdf.js"></script>
+    <script src="open_pdf.js"></script>
     <script src="stars_and_menu.js"></script>
     <script src="grid.js"></script>
 </body>
