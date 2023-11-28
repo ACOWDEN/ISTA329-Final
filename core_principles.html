@@ -11,7 +11,7 @@
 
 <body>
   
-	<div class="stars"></div>
+    <div class="stars"></div>
 
     <header>
         <h1>blockspace.</h1>
@@ -31,24 +31,25 @@
         </div>
     </header>
 
-	<main>
+    <main>
         <div class="grid-container" id="gridContainer">
-            <div class="grid-item" onclick="loadPowerPoint('Trust and Transparency')">Trust and Transparency</div>
-            <div class="grid-item" onclick="loadPowerPoint('Permission')">Permission</div>
-            <div class="grid-item" onclick="loadPowerPoint('Middlemen')">Middlemen</div>
-            <div class="grid-item" onclick="loadPowerPoint('Centralization')">Centralization</div>
-            <div class="grid-item" onclick="loadPowerPoint('Incentives')">Incentives</div>
-            <div class="grid-item" onclick="loadPowerPoint('Ownership')">Ownership</div>
+            <div class="grid-item" onclick="openPowerPoint('Trust and Transparency')">Trust and Transparency</div>
+			<div class="grid-item" onclick="openPowerPoint('Permission')">Permission</div>
+			<div class="grid-item" onclick="openPowerPoint('Middlemen')">Middlemen</div>
+			<div class="grid-item" onclick="openPowerPoint('Centralization')">Centralization</div>
+			<div class="grid-item" onclick="openPowerPoint('Incentives')">Incentives</div>
+			<div class="grid-item" onclick="openPowerPoint('Ownership')">Ownership</div>
         </div>
-	</main>
 
-	<footer>
+        <iframe id="powerpointIframe" width="100%" height="600" src="" frameborder="0"></iframe>
+    </main>
+
+    <footer>
         <p>&copy; 2023 blockspace. All rights reserved.</p>
     </footer>
-    
-	<script src="stars_and_menu.js"></script>
-	<script src="grid.js"></script>
-
+    <script scr= "open_powerpoint.js"></script>
+    <script src="stars_and_menu.js"></script>
+    <script src="grid.js"></script>
 </body>
 
 </html>
