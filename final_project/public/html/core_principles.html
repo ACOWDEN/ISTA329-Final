@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Core Principles</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css" />
+    <link rel="stylesheet" href="../stylesheets/grid.css" />
+  </head>
+
+  <body>
+    <div class="stars"></div>
+
+    <header>
+      <h1>blockspace.</h1>
+      <button class="menu-bar" onclick="toggleMenu()">
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+      </button>
+      <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="./core_principles.html">Core Principles</a>
+          <a href="./blockchains_and_cryptocurrency.html"
+            >Blockchains and Cryptocurrency</a
+          >
+          <a href="./how_does_it_work.html">How Does It Work?</a>
+          <a href="./risks.html">Risks Involved</a>
+          <a href="./controversies_and_misconceptions.html"
+            >Controversies and Misconceptions</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid-container" id="gridContainer">
+        <div
+          class="grid-item"
+          onclick="openPowerPoint('Trust and Transparency')"
+        >
+          Trust and Transparency
+        </div>
+        <div class="grid-item" onclick="openPowerPoint('Permission')">
+          Permission
+        </div>
+        <div class="grid-item" onclick="openPowerPoint('Middlemen')">
+          Middlemen
+        </div>
+        <div class="grid-item" onclick="openPowerPoint('Centralization')">
+          Centralization
+        </div>
+        <div class="grid-item" onclick="openPowerPoint('Incentives')">
+          Incentives
+        </div>
+        <div class="grid-item" onclick="openPowerPoint('Ownership')">
+          Ownership
+        </div>
+      </div>
+
+      <iframe
+        id="powerpointIframe"
+        width="100%"
+        height="600"
+        src=""
+        frameborder="0"
+      ></iframe>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 blockspace. All rights reserved.</p>
+    </footer>
+    <script src="../../js/open_powerpoint.js"></script>
+    <script src="../../js/stars_and_menu.js"></script>
+    <script src="../../js/grid.js"></script>
+  </body>
+</html>
