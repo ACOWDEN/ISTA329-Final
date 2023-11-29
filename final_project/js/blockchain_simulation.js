@@ -5,60 +5,73 @@ canvas.height = window.innerHeight;
 var c = canvas.getContext('2d');
 
 const backgroundImage = new Image();
-backgroundImage.src = '/Users/campage/Desktop/blockspace.jpg';
+backgroundImage.src = '../../images/blockspace.jpg';
 
-let txCount = 0;
 let blockCount = 0;
-let resetCount = 0;
 let spacing = 0;
 
-backgroundImage.onload = function() {
-    draw();
+function drawSquare(color, x, y, size) {
+    c.fillStyle = color;
+    c.fillRect(x, y, size, size);
+}
+
+function drawText(text, x, y, size, color) {
+    c.fillStyle = color;
+    c.font = size + 'px Arial';
+    c.fillText(text, x, y + size);
+}
+
+function drawButtons() {
+    drawSquare('black', 225, 100, 300);
+    drawText('SEND', 325, 260, 20, 'white');
+
+	drawSquare('black', 575, 100, 300);
+	drawText('BUY', 665, 260, 20, 'white');
+
+	drawSquare('black', 925, 100, 300);
+	drawText('SELL', 1005, 260, 20, 'white');
+}
+
+function addBlock() {
+	blockCount++;
+	spacing = 100 * blockCount;
+    drawSquare('lightblue', (100 + spacing), 500, 100);
+    let i = 0;
+	while(i < blockCount) {
+	  i++;
+	  spacing = 100 * i;
+	  drawSquare('lightblue', (100 + spacing), 500, 100);
+	}
+}
+
+var intervalID;
+
+function startDrawingInterval() {
+    intervalID = setInterval(function () {
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        c.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+        drawButtons();
+        addBlock();
+    }, 5000);
+}
+
+backgroundImage.onload = function () {
+    c.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+    drawButtons();
+    startDrawingInterval();
 };
 
-function tx() {
-	if (txCount < 4) {
-		c.fillRect(100, 150 + (50 * txCount), 40);
-		txCount++;
-	}
-	else {
-		blockCount++;
-		spacing = 100 * blockCount;
-		c.fillRect(100 + spacing, 500, 90);
-		
-		while (resetCount < blockCount) {
-			resetCount++;
-			spacing = 100 * resetCount;
-			c.fillRect(100 + spacing, 500, 90);
-		}
-		resetCount = 0;
-		txCount = 0;
-	}
-}
+canvas.addEventListener('click', function (event) {
+    var mouseX = event.clientX;
+    var mouseY = event.clientY;
 
-function draw() {
-    c.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
-
-    c.fillRect(225, 100, 300, 300);
-    c.fillRect(575, 100, 300, 300);
-    c.fillRect(925, 100, 300, 300);
-
-    c.font = '50px Arial';
-    c.fillStyle = 'white';
-    c.fillText('SEND', 325, 260);
-    c.fillText('BUY', 665, 260);
-    c.fillText('SELL', 1005, 260);
-}
-
-function mouseClicked() {
-	if (225 <= mouseX && mouseX <= 525 && 
-		100 <= mouseY && mouseY <= 400) tx();
-  
-	if (575 <= mouseX && mouseX <= 875 &&
-		100 <= mouseY && mouseY <= 400) tx();
-  
-	if (925 <= mouseX && mouseX <= 1225 &&
-        100 <= mouseY && mouseY <= 400) tx();
-}
-
-console.log(canvas);
+    if (
+        (225 <= mouseX && mouseX <= 525 && 100 <= mouseY && mouseY <= 400) ||
+        (575 <= mouseX && mouseX <= 875 && 100 <= mouseY && mouseY <= 400) ||
+        (925 <= mouseX && mouseX <= 1225 && 100 <= mouseY && mouseY <= 400)
+    ) {
+        clearInterval(intervalID);
+        addBlock();
+        startDrawingInterval();
+    }
+});
