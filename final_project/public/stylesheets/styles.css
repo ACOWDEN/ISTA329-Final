@@ -1,14 +1,14 @@
 body {
 	font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #001f3f;
-    color: #fff;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #001f3f;
+	color: #fff;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 header {
@@ -47,7 +47,7 @@ header {
 .menu-bar.open .menu-icon:nth-child(3) {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
-	
+
 .dropdown {
 	display: none;
 	position: absolute;
@@ -90,7 +90,8 @@ header {
 }
 
 @keyframes twinkling {
-	0%, 100% {
+	0%,
+	100% {
 		opacity: 1;
 	}
 
@@ -98,7 +99,7 @@ header {
 		opacity: 0;
 	}
 }
-	
+
 footer {
 	background-color: transparent;
 	color: #fff;
@@ -135,7 +136,59 @@ button {
 	cursor: pointer;
 }
 
+a {
+	text-decoration: none;
+}
+
 #logo {
-  text-decoration: none;
-  color: white;
+	text-decoration: none;
+	color: white;
+}
+
+#trust {
+	font-size: 3rem;
+	color: #001f3f;
+	opacity: 80%;
+	background-image: url("../img/trust.png");
+}
+
+#permission {
+	font-size: 3rem;
+	color: #001f3f;
+	opacity: 80%;
+	background-image: url("../img/permission.png");
+}
+#middlemen {
+	font-size: 3rem;
+	color: #001f3f;
+	opacity: 80%;
+	background-image: url("../img/middlemen.png");
+}
+#centralization {
+	font-size: 3rem;
+	color: #001f3f;
+	opacity: 80%;
+	background-image: url("../img/centralization.png");
+}
+#incentives {
+	font-size: 3rem;
+	color: #001f3f;
+	opacity: 80%;
+	background-image: url("../img/incentives.png");
+}
+#ownership {
+	font-size: 3rem;
+	color: #001f3f;
+	opacity: 70%;
+	background-image: url("../img/ownership.png");
+}
+
+#trust:hover,
+#permission:hover,
+#middlemen:hover,
+#centralization:hover,
+#incentives:hover,
+#ownership:hover {
+  opacity: 100%;
+  color: #fff
 }
