@@ -189,6 +189,36 @@ a {
 #centralization:hover,
 #incentives:hover,
 #ownership:hover {
-  opacity: 100%;
-  color: #fff
+	opacity: 100%;
+	color: #fff
+}
+
+.container {
+	max-width: 800px;
+	margin: auto;
+}
+
+.title-box {
+	background-color: #333;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px; /* Add rounded corners */
+}
+
+.title-box h2 {
+	color: #fff;
+	margin: 0;
+}
+
+.article-container {
+	background-color: #444;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	color: #fff;
+	line-height: 1.6;
+}
+
+.article-container p:first-child {
+	margin-top: 0;
 }
