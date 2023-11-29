@@ -1,46 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blockchains and Cryptocurrency</title>
-    <link rel="stylesheet" href="../stylesheets/styles.css" />
-  </head>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Blockchains and Cryptocurrency</title>
+	<link rel="stylesheet" href="../stylesheets/styles.css" />
+</head>
+<body>
+	<div class="stars"></div>
 
-  <body>
-    <div class="stars"></div>
+	<header>
+		<h1><a id="logo" href="./blockspace_home.html">blockspace.</a></h1>
+		<button class="menu-bar" onclick="toggleMenu()">
+			<div class="menu-icon"></div>
+			<div class="menu-icon"></div>
+			<div class="menu-icon"></div>
+		</button>
+		<div class="dropdown">
+			<div class="dropdown-content">
+				<a href="./core_principles.html">Core Principles</a>
+				<a href="./blockchains_and_cryptocurrency.html">Blockchains and Cryptocurrency</a>
+				<a href="./how_does_it_work.html">How Does It Work?</a>
+				<a href="./risks.html">Risks Involved</a>
+				<a href="./controversies_and_misconceptions.html">Controversies and Misconceptions</a>
+				<a href="./feedback.html">Contact Us</a>
+			</div>
+		</div>
+	</header>
 
-    <header>
-      <h1><a id="logo" href="./blockspace_home.html">blockspace.</a></h1>
-      <button class="menu-bar" onclick="toggleMenu()">
-        <div class="menu-icon"></div>
-        <div class="menu-icon"></div>
-        <div class="menu-icon"></div>
-      </button>
-      <div class="dropdown">
-        <div class="dropdown-content">
-          <a href="./core_principles.html">Core Principles</a>
-          <a href="./blockchains_and_cryptocurrency.html"
-            >Blockchains and Cryptocurrency</a
-          >
-          <a href="./how_does_it_work.html">How Does It Work?</a>
-          <a href="./risks.html">Risks Involved</a>
-          <a href="./controversies_and_misconceptions.html"
-            >Controversies and Misconceptions</a
-          >
-        </div>
-      </div>
-    </header>
+	<main class="container">
+		<div class="title-box">
+			<h2>Blockchains and Cryptocurrency</h2>
+		</div>
 
-    <main>
-      <h2>Blockchains and Cryptocurrency</h2>
-    </main>
+		<div class="article-container">
+			<h3>Refresher</h3>
+			By now, we've covered the main features of the systems that make our world go
+			round today. We've highlighted that these systems are far from perfect, and that
+			they come with important tradeoffs all of which are ultimately rooted in the need
+			to trust other people. Simply put, we are always vulnerable to the bias,
+			corruption, or neglect of whoever has control in the systems we use.
+			<br><br>
+			<h3>What is a Blockchain?</h3>
+			Try not to think too hard on the word “blockchain” itself, let's just talk the 
+			basics. Blockchains are a new way to build the trust-based systems in our lives, 
+			but trustlessly. If that seems a little confusing, let's use the Internet as an 
+			example. The Internet was a new a way to build the non-digital systems of our 
+			everyday lives, but digitally. Blockchains aren't trying to replace the Internet, 
+			but like the Internet, they are useful tools for radically improving the 
+			systems we use today with <em>much</em> better trade-offs.
+			<br><br>
+			The most basic (but not the only) function of a blockchain is to let us store and 
+			use digital money trustlessly. However unlike a bank or a digital payment 
+			provider, blockchains are not controlled by a single entity; they are 
+			decentralized. This design removes the single points of failure that we suffer 
+			from in the services we use today.
+			<br><br>
+			There is no system controller deciding who can and cannot use a blockchain, it's 
+			permissionless. Anyone can create a blockchain account, and no authority exists 
+			which can “ban” this account or control how it uses the blockchain. Users never 
+			have to worry about some system authority closing or freezing their account for 
+			any reason, and digital finance becomes vastly more accessible for anyone in the 
+			world with an Internet connection. Creating an account is functionally as simple 
+			as clicking a button, putting no personal information at risk since none is 
+			required.
+			<br><br>
+			With blockchain accounts and any assets stored within them, users get absolute 
+			ownership. Not only does no middleman exist with control over users' accounts, 
+			but users do not need a middleman to run the system they want to use. Instead, 
+			users can run the blockchain software directly on their own devices. This means 
+			with blockchains, we can make peer-to-peer (p2p) transactions with any other 
+			account 24/7, where there is no middleman in control of our account or the 
+			system, and therefore no middleman between us and the people we transact with.
+			<br><br>
+			<h3>Building Apps on a Blockchain</h3>
+			Now while it's great that anyone in the world can use a blockchain for storing 
+			and using digital money trustlessly, this is kind of boring. Sure, this covers 
+			simple financial services like banks and payment providers, but didn't we say 
+			that we can use blockchains to build any of the trust-based systems in our lives?
+			Well, just like the Internet, we can build applications that use this core 
+			functionality of blockchains! By default, the blockchain doesn't offer some 
+			platform for trading stocks and commodities, taking out loans, or getting 
+			insurance, but these are apps that can be built on a blockchain. There is no 
+			built-in games or social media platforms, but these can be built on a blockchain 
+			too.
+			<br><br>
+			<h3>What is Cryptocurrency?</h3>
+		</div>
+	</main>
 
-    <footer>
-      <p>&copy; 2023 blockspace. All rights reserved.</p>
-      <p><a href="mailto:acowden@arizona.edu">Feedback Email</a></p>
-    </footer>
+  <footer>
+    <p>&copy; 2023 blockspace. All rights reserved.</p>
+    <p><a href="mailto:acowden@arizona.edu">Feedback Email</a></p>
+  </footer>
 
-    <script src="../../js/stars_and_menu.js"></script>
-  </body>
+	<script src="../../js/stars_and_menu.js"></script>
+</body>
 </html>
