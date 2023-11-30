@@ -12,7 +12,7 @@ function openPowerPoint(presentationName) {
     } else if (presentationName === 'Incentives') {
         google_slides = 'https://docs.google.com/presentation/d/e/2PACX-1vRZ3eD38t8NXQhSs2fg8hf00cW4-_sUEn8a_xsLJekXJlfaDcOt5V6QNnUKTNRj3uQdgIL9c0X3dNnW/embed?start=false&loop=false&delayms=3000';
     } else if (presentationName === 'Ownership') {
-        google_slides = 'https://';
+        google_slides = 'https://docs.google.com/presentation/d/e/2PACX-1vS-9akvlZU9-tUTEYBplXY2oyMVet9Cq48Z4rIAiWO2szWEI8cl9ZkpkKdT44ZG8VEvzncf34CCiT9k/embed?start=false&loop=false&delayms=3000';    
     }
 
     var iframe = parent.document.getElementById('powerpointIframe');
