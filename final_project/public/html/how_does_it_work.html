@@ -36,23 +36,62 @@
 
 		<div class="article-container">
 			<h3>How Blockchains Work</h3>
-			A blockchain is database network that securely records transactions across a 
-			bunch of different computers. Multiple copies of the blockchain system exist 
-			and run on different devices (nodes) that anyone can join in running themselves. 
+			Blockchains are databases or digital ledgers that securely record 
+			transactions across a network of computers. Multiple copies of the ledger 
+			exist on different devices, or nodes, within the network. When a 
+			transaction occurs, each node is validated and added to a block, which is 
+			then appended to the existing chain of blocks, creating a chronological 
+			record of transactions. Consensus is vital in this process; agreement among 
+			all devices ensures accurate transaction records without a central 
+			controller, making certain that all copies of the ledger agree on 
+			transactions and their order.
+			<br></br>
+			As databases, blockchains maintain an unchangeable history of all user 
+			transactions. Instead of existing as a single instance, they exist as 
+			thousands of instances around the world on computers like yours. Rather than 
+			being updated by a single entity, updates are made by a group of entities, 
+			each running their own copy of the blockchain database and collectively 
+			agreeing on updates. Unlike traditional databases, the blockchain is not 
+			updated with each individual transaction; instead, it is periodically updated 
+			with groups of transactions called "blocks." Once a block is added to the 
+			blockchain, it becomes immutable and cannot be removed or altered.
 			<br><br>
-			When a user makes a transaction, it is verified by every device in the network
-			and waits to be added to the unchangeable history of transactions. When it's
-			ready, the transaction, along with other transactions waiting to be added, is 
-			compiled into a "block" and added to the history of transactions
-			(all the previous blocks). This creates a chronological history of transactions
-			made on the network, proving the context of every user's current balance at any given time.
-			Once a block is added, it cannot be changed or removed from the network.
+			Blockchains are networks made up of a bunch of computers called “nodes”. 
+			When users do something on a blockchain, whether it be sending digital 
+			assets or interacting with an application, they are making a transaction 
+			from a node. This node could be running on their own computer, or they 
+			could connect to another person's node instead of running their own (RPC).
+			When a user tries to make a transaction, the node stores it in its 
+			mempool, sort of like a waiting room, and shares the transaction with 
+			other computers in the network. These computers similarly put the 
+			transaction in their own mempool and continue to share the transaction 
+			with other nodes.
 			<br><br>
-			Consensus is vital in this process. Agreement among all these devices (consensus) 
-			ensures accurate transaction records without a central controller. It ensures 
-			that all the copies of the ledger agree on the transactions and the order they're 
-			added. Each device running the blockchain software will only update their history
-			of transactions if they agree that the update is valid.
+			These unconfirmed transactions sitting in each node's mempool are waiting 
+			to be added into a block. Every few seconds, or maybe even minutes, a 
+			new block is ready to be filled with transactions and added to the 
+			blockchain. Someone has to fill and add the block though, so one node in 
+			the network is randomly selected to fill a new block with the 
+			transactions in their mempool, then share it with the other nodes in the 
+			network.
+			<br><br>
+			The block proposer node adds the block to their own copy of the 
+			blockchain. If the nodes they share the block with agree that the block 
+			is valid, those nodes also add the block to their copy of the blockchain 
+			and continue to share the block.
+			<br><br>
+			Users make transactions on the blockchain using a blockchain wallet. A 
+			transaction may be sending crypto assets or interacting with some 
+			application.
+			<br><br>
+			If you make a transaction, you add it to the blockchain database 
+			yourself, or you can trust someone else to do it (RPC). Once you add it 
+			to your own copy of the blockchain, all the other nodes in the network 
+			just like yours verify that the transaction is valid. If they agree it's 
+			valid, they add it to their copy of the blockchain database. Similarly, 
+			your node will receive transactions that are made by others, and the 
+			node's software will verify that the transaction is valid before it adds 
+			it to your copy of the database.
 			<br><br>
 			This is how a database can exist not as a single instance, but a bunch of 
 			instances that are all the same and update “in unison”. In this, no 
@@ -61,9 +100,6 @@
 			and therefore not make it to their own databases. Similarly, if anyone 
 			inserts an invalid transaction to be added to the blockchain, it will not 
 			be recognized by the rest of the network.
-			Users make transactions on the blockchain using a blockchain wallet. A 
-			transaction may be sending crypto assets or interacting with some 
-			application.
 			<br><br>
 			<h3>Basic Blockchain Simulation</h3>
 			The interactive simulation below gives a high level idea of how a blockchain
