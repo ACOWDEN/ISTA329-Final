@@ -52,7 +52,6 @@ function addBlock() {
     let i = 0;
     while (i < blockCount) {
         i++;
-        spacing = 100 * i;
         drawSquare('lightgreen', (100 + spacing), 500, 100, true);
     }
     txCount = 0;
@@ -81,6 +80,9 @@ function startDrawingInterval() {
 }
 
 function tx() {
+    if (blockCount === 0) {
+        startDrawingInterval();
+    }
     if (txCount < 10) {
 		drawSquare('lightblue', 110, (150 + (50 * txCount)), 40);
 		txCount++;
@@ -93,7 +95,6 @@ function tx() {
 backgroundImage.onload = function () {
     c.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
     drawButtons();
-    startDrawingInterval();
 };
 
 canvas.addEventListener('click', function (event) {
